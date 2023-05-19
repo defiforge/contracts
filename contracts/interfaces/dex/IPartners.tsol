@@ -1,0 +1,8 @@
+pragma ever-solidity >= 0.61.2;
+pragma AbiHeader expire;
+pragma AbiHeader pubkey;
+
+interface IPartners {
+    function earlyPartnerPct() external view returns (uint256);
+    function isEarlyPartner(address account) external view returns (bool);
+}

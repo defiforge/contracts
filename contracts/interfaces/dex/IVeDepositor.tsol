@@ -1,0 +1,8 @@
+pragma ever-solidity >= 0.61.2;
+pragma AbiHeader expire;
+pragma AbiHeader pubkey;
+
+
+interface IVeDepositor is IERC20 {
+    function depositTokens(uint256 amount) external returns (bool);
+}

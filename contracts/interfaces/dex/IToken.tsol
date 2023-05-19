@@ -1,0 +1,7 @@
+pragma ever-solidity >= 0.61.2;
+pragma AbiHeader expire;
+pragma AbiHeader pubkey;
+
+interface ISolidexToken is IERC20 {
+    function mint(address _to, uint256 _value) external returns (bool);
+}

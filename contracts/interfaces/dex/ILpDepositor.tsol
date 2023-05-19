@@ -1,0 +1,11 @@
+pragma ever-solidity >= 0.61.2;
+pragma AbiHeader expire;
+pragma AbiHeader pubkey;
+
+interface ILpDepositor {
+    function setTokenID(uint256 tokenID) external returns (bool);
+    function userBalances(address user, address pool) external view returns (uint256);
+    function totalBalances(address pool) external view returns (uint256);
+    function transferDeposit(address pool, address from, address to, uint256 amount) external returns (bool);
+    function whitelist(address token) external returns (bool);
+}
